@@ -1,0 +1,3 @@
+rootProject.name='PsrLibrary'
+include ':app'
+include ':paydunyapsrlibrary'
