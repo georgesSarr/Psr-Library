@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_grey_border"
+        app:ccp_showFullName="true"
+        app:ccp_showPhoneCode="false"
+        app:ccp_showNameCode="false"
+        app:ccpDialog_allowSearch="false"
+        app:ccp_customMasterCountries="SN,BJ,CI"
+        app:ccp_textSize="14sp"
+        app:ccp_defaultNameCode="SN"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_paydunya"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@drawable/paydunya_logo_mobile"
+            android:background="@drawable/rounded_payment_background"/>
+        <ImageView
+            android:id="@+id/iv_orange_money"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@drawable/orangemoney_logo_mobile"
+            android:background="@drawable/rounded_payment_background"/>
+        <ImageView
+            android:id="@+id/iv_visa"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@drawable/card_logo_mobile"
+            android:background="@drawable/rounded_payment_background"/>
+        <ImageView
+            android:id="@+id/iv_wari"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@drawable/wari_proximo_logo_mobile"
+            android:background="@drawable/rounded_payment_background"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
