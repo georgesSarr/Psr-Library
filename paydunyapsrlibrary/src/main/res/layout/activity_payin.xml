@@ -80,17 +80,17 @@
             android:layout_height="60dp"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
-            android:padding="10dp"
-            android:src="@drawable/mtn_ima"
-            android:visibility="gone" />
+            android:padding="4dp"
+            android:src="@drawable/mtn"
+            android:visibility="visible" />
         <ImageView
             android:id="@+id/iv_mtn_benin"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
-            android:padding="10dp"
-            android:src="@drawable/mtn_ima"
+            android:padding="4dp"
+            android:src="@drawable/mtn"
             android:visibility="gone" />
     </LinearLayout>
 
