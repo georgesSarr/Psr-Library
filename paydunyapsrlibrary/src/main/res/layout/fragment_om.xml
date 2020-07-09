@@ -35,29 +35,42 @@
                 android:text="200 FCFA"
                 android:textStyle="bold"/>
         </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="N° de téléphone">
 
-            <EditText
-                android:id="@+id/input_email"
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="N° de téléphone"
                 android:maxLines="1"
                 android:inputType="number"/>
 
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/input_password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code d'autorisation"
+            android:inputType="number">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Code d'autorisation"/>
+                android:maxLines="1"/>
 
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:text="Pour obtenir un code d'autorisation, faites le #144#391#"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:icon="@drawable/ic_check_circle"
@@ -70,5 +83,6 @@
             android:gravity="center|bottom"
             android:text="La transaction est sécurisé par © PayDunya "/>
     </LinearLayout>
+
 
 </LinearLayout>

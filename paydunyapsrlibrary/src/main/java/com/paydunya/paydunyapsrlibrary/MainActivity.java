@@ -2,6 +2,7 @@ package com.paydunya.paydunyapsrlibrary;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .add(R.id.fragment_container, firstFragment).commit();
             setSelectedColor(R.id.iv_paydunya);
         }
+
     }
 
     @Override
