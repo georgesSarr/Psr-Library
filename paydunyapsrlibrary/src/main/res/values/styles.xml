@@ -8,5 +8,4 @@
         <item name="colorPrimaryDark">@color/libColorPrimaryDark</item>
         <item name="colorAccent">@color/libColorAccent</item>
     </style>
-
 </resources>

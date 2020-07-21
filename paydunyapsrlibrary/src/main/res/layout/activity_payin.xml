@@ -30,8 +30,8 @@
 
         <ImageView
             android:id="@+id/iv_paydunya"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"
@@ -39,8 +39,8 @@
 
         <ImageView
             android:id="@+id/iv_orange_money"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"
@@ -48,8 +48,8 @@
 
         <ImageView
             android:id="@+id/iv_visa"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"
@@ -57,17 +57,25 @@
 
         <ImageView
             android:id="@+id/iv_wari"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"
             android:src="@drawable/wari_proximo_logo_mobile" />
+    <ImageView
+            android:id="@+id/iv_wizall"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_payment_background"
+            android:padding="4dp"
+            android:src="@drawable/wizall" />
 
         <ImageView
             android:id="@+id/iv_om_ci"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"
@@ -76,17 +84,17 @@
 
         <ImageView
             android:id="@+id/iv_mtn_ci"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"
             android:src="@drawable/mtn"
-            android:visibility="visible" />
+            android:visibility="gone" />
         <ImageView
             android:id="@+id/iv_mtn_benin"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/payment_image_size"
+            android:layout_height="@dimen/payment_image_size"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_payment_background"
             android:padding="4dp"

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_custom_dialog_warning"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            app:lottie_fileName="warning.json"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_custom_dialog_check"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            app:lottie_fileName="check-animation.json"/>
+        <TextView
+            android:id="@+id/tv_custom_dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_negative_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text_size"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/libColorPrimary"/>
+            <TextView
+                android:id="@+id/tv_positive_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text_size"
+                android:layout_margin="10dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/libColorPrimary"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

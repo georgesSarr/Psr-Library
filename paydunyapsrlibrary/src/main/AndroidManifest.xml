@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.paydunya.paydunyapsrlibrary">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
         <activity android:name=".PayInActivity"
             android:theme="@style/LibAppTheme"

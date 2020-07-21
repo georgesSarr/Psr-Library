@@ -1,11 +1,15 @@
 package com.paydunya.paydunyapsrlibrary;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hbb20.CountryCodePicker;
+import com.paydunya.paydunyapsrlibrary.Common.BaseActivity;
+import com.paydunya.paydunyapsrlibrary.Constants.IntentConstants;
 import com.paydunya.paydunyapsrlibrary.FragmentBenin.MtnBeninFragment;
 import com.paydunya.paydunyapsrlibrary.FragmentCI.FragmentOmCI;
 import com.paydunya.paydunyapsrlibrary.FragmentCI.MtnCiFragment;
@@ -13,13 +17,22 @@ import com.paydunya.paydunyapsrlibrary.Fragments.OmFragment;
 import com.paydunya.paydunyapsrlibrary.Fragments.PayDunyaFragment;
 import com.paydunya.paydunyapsrlibrary.Fragments.VisaFragment;
 import com.paydunya.paydunyapsrlibrary.Fragments.WariProximoFragment;
+import com.paydunya.paydunyapsrlibrary.Fragments.WizallFragment;
+import com.paydunya.paydunyapsrlibrary.Managers.PaymentManager;
 
-public class PayInActivity extends AppCompatActivity implements View.OnClickListener {
+public class PayInActivity extends BaseActivity implements View.OnClickListener {
 
+    //public String invoiceToken;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payin);
+
+        //Intent intent = getIntent();
+        //invoiceToken = intent.getStringExtra(IntentConstants.INVOICE_TOKEN);
+
+
+
 
         findViewById(R.id.iv_orange_money).setOnClickListener(this);
         findViewById(R.id.iv_visa).setOnClickListener(this);
@@ -28,6 +41,7 @@ public class PayInActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.iv_mtn_benin).setOnClickListener(this);
         findViewById(R.id.iv_om_ci).setOnClickListener(this);
         findViewById(R.id.iv_mtn_ci).setOnClickListener(this);
+        findViewById(R.id.iv_wizall).setOnClickListener(this);
 
         final CountryCodePicker countryCodePicker = findViewById(R.id.ccp);
         if (findViewById(R.id.fragment_container) != null) {
@@ -83,6 +97,13 @@ public class PayInActivity extends AppCompatActivity implements View.OnClickList
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, wariProximoFragment).commit();
             setSelectedColor(R.id.iv_wari);
+        }
+        else if (id == R.id.iv_wizall) {
+            WizallFragment wizallFragment = new WizallFragment();
+            wizallFragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, wizallFragment).commit();
+            setSelectedColor(R.id.iv_wizall);
         }
     else if (id == R.id.iv_om_ci) {
             FragmentOmCI fragmentOmCI = new FragmentOmCI();
@@ -145,7 +166,6 @@ public class PayInActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void setSelectedColor(int selectedId) {
-
         findViewById(R.id.iv_paydunya).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
         findViewById(R.id.iv_wari).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
         findViewById(R.id.iv_visa).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
@@ -153,6 +173,9 @@ public class PayInActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.iv_om_ci).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
         findViewById(R.id.iv_mtn_ci).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
         findViewById(R.id.iv_mtn_benin).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
+        findViewById(R.id.iv_wizall).setBackground(getResources().getDrawable(R.drawable.rounded_payment_background));
         findViewById(selectedId).setBackground(getResources().getDrawable(R.drawable.rounded_payment_selected_background));
     }
+
+
 }
